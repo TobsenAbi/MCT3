@@ -45,3 +45,14 @@ add_dependencies(${PROJECT_NAME} generate_image_header)
 target_link_libraries(${PROJECT_NAME} PRIVATE
                                         fmt::fmt
                                         CLI11::CLI11)
+
+# Aufgabe 5 -----------------------------------------------------------------------------------------------------------
+
+find_package(OpenCV REQUIRED core imgcodecs imgproc)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    fmt::fmt
+    opencv_core
+    opencv_imgcodecs
+    opencv_imgproc
+)

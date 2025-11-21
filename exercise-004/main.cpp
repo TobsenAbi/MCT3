@@ -3,7 +3,12 @@
 
 #include "CLI/CLI.hpp"
 #include "config.h"
-#include "image.h"  //Ausgabe 3
+// Ausgabe 3
+#include "image.h"
+// Aufgabe 5
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/imgproc.hpp>
 
 auto main(int argc, char **argv) -> int
 {
@@ -39,6 +44,13 @@ auto main(int argc, char **argv) -> int
     // Nicht lösbar?
 
     // Aufgabe 5
+    // image ist const unsigned char*, Länge ist width * height * 3 (für RGB)
+    cv::Mat img(image_height, image_width, CV_8UC3, (void *)image);
+    // img kann jetzt direkt genutzt werden, z.B. Image anzeigen oder Parameter ausgeben
+    fmt::println("OpenCV Bild-Parameter:");
+    fmt::println("Breite: {}", img.cols);
+    fmt::println("Höhe: {}", img.rows);
+    fmt::println("Kanäle: {}", img.channels());
 
     // Aufgabe 6
 
