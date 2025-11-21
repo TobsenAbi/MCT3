@@ -3,6 +3,7 @@
 
 #include "CLI/CLI.hpp"
 #include "config.h"
+#include "image.h"  //Ausgabe 3
 
 auto main(int argc, char **argv) -> int
 {
@@ -28,8 +29,18 @@ auto main(int argc, char **argv) -> int
      */
     fmt::print("Hello, {}!\n", app.get_name());
 
-    /* INSERT YOUR CODE HERE */
+    // Aufgabe 3
+    fmt::println("Breite:\t{}", image_width);
+    fmt::println("Höhe:\t{}", image_height);
+    fmt::println("Größe (Byte):\t{}", sizeof(image));
+    fmt::println("Mach dich ab G'schissaner");
 
+    // Aufgabe 4
+    // Nicht lösbar?
+
+    // Aufgabe 5
+
+    // Aufgabe 6
 
     return 0; /* exit gracefully*/
 }
